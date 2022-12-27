@@ -9,7 +9,9 @@ from getpass import getpass
 def parseArgs():
     """Parse and return argparse arguments"""
     parser = argparse.ArgumentParser(
-        description="Create json file for multiple votes in a single transaction"
+        prog="multi-vote.py",
+        description="Create json file for multiple votes in a single transaction",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
         "--denom",

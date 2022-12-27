@@ -177,8 +177,7 @@ def sign_and_broadcast(
     )
     keypass = getpass(prompt="Enter keyring passphrase: ")
     result = run(
-        f"{daemon} tx sign /tmp/{daemon}_{timestamp}_vote.json --from {keyname} -ojson --output-document ~/{daemon}_{timestamp}_vote_signed.json --node {node} --chain-id {chain_id} --keyring-backend {keyringbackend}",
-        stdin=keypass,
+        f"echo {keypass} | {daemon} tx sign /tmp/{daemon}_{timestamp}_vote.json --from {keyname} -ojson --output-document ~/{daemon}_{timestamp}_vote_signed.json --node {node} --chain-id {chain_id} --keyring-backend {keyringbackend}",
         shell=True,
         capture_output=True,
         text=True,

@@ -7,7 +7,7 @@ This application aims to help validators submit multiple vote transactions in a 
 Clone the repo:
 
 ```
-git clone <url>
+git clone https://github.com/Relyte/cosmos-multivote
 ```
 
 Run the application with the desired parameters (see !#available-parameters):
